@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="org.scn.cordova.ringtone" version="0.1.0">
+    <name>Ringtone</name>
+    <author>Wang Da</author>
+    <license>Apache 2.0</license>
+    <description>Cordova Ringtone Plugin</description>
+    <keywords>cordova,ringtone</keywords>
+    <js-module src="www/ringtone.js" name="ringtone">
+        <clobbers target="ringtone" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Ringtone">
+                <param name="android-package" value="org.scn.cordova.ringtone.Ringtone"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/Ringtone.java" target-dir="src/org/scn/cordova/ringtone" />
+    </platform>
+</plugin>
